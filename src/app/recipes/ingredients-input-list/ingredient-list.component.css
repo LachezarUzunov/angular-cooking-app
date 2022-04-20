@@ -1,0 +1,13 @@
+.add-ingredient {
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: yellowgreen;
+  color: black;
+}
+
+p {
+  color: white;
+  text-transform: capitalize;
+  font-size: 16px;
+}

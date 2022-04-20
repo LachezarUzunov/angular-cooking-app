@@ -1,0 +1,8 @@
+<div *ngFor="let ingredient of ingredients">
+  <article class="ingredient">
+    <p>
+      {{ ingredients.indexOf(ingredient) + 1 }}. {{ ingredient.ingredient }} -
+      {{ ingredient.quantity }} <span>{{ ingredient.type }}</span>
+    </p>
+  </article>
+</div>

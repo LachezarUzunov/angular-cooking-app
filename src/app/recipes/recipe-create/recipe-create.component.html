@@ -1,0 +1,99 @@
+<section class="background">
+  <section class="content">
+    <div class="title">
+      <h2>Publish your awesome recipe!</h2>
+      <div class="line"></div>
+    </div>
+    <div class="form">
+      <form class="form-inside">
+        <input
+          class="inpit-opacity input--field"
+          type="text"
+          placeholder="Recipe title..."
+        />
+        <p>Ingredients:</p>
+        <app-ingredient-list></app-ingredient-list>
+        <article class="ingredient">
+          <input
+            class="inpit-opacity input--field"
+            type="text"
+            placeholder="Carrots, onion, pasta..."
+          />
+          <input
+            class="inpit-opacity input--field"
+            type="number"
+            placeholder="quantity..."
+          />
+          <select name="ingredient-type" id="kilo">
+            <option value="kilo">Kilo(s).</option>
+            <option value="mililiters">ml.</option>
+            <option value="pieces">Item(s)</option>
+            <option value="by-taste">By taste</option>
+          </select>
+          <button class="add-ingredient">+</button>
+        </article>
+        <!-- ingredients component here -->
+
+        <p>Preparation - Add the Steps for Cooking Your Masterpiece</p>
+        <textarea
+          class="inpit-opacity"
+          name="preparation"
+          id="preparation"
+          cols="10"
+          rows="4"
+        ></textarea>
+
+        <p>Add To Categories</p>
+        <article class="categories">
+          <div class="caterory-list1">
+            <label class="checkbox"
+              ><input type="checkbox" id="vegetarian" name="vegetarian" />
+              Vegetarian</label
+            >
+            <label class="checkbox"
+              ><input type="checkbox" id="soup" name="soup" /> Soup</label
+            >
+          </div>
+          <div class="category-list2">
+            <label class="checkbox"
+              ><input type="checkbox" id="salad" name="salad" /> Salad</label
+            >
+            <label class="checkbox"
+              ><input type="checkbox" id="meat" name="meat" /> Meat</label
+            >
+          </div>
+
+          <div class="category-list3">
+            <label class="checkbox"
+              ><input type="checkbox" id="dessert" name="dessert" />
+              Dessert</label
+            >
+            <label class="checkbox"
+              ><input type="checkbox" id="pizza" name="pizza" /> Pizza</label
+            >
+          </div>
+          <div class="category-list4">
+            <label class="checkbox"
+              ><input type="checkbox" id="pasta" name="pasta" /> Pasta</label
+            >
+            <label class="checkbox"
+              ><input type="checkbox" id="fast" name="fast" /> Under 30
+              mins</label
+            >
+          </div>
+        </article>
+
+        <div class="suitable">
+          <p>
+            Suitable for
+            <span
+              ><input class="inpit-opacity input--field" type="number"
+            /></span>
+          </p>
+        </div>
+
+        <button class="button-main">Publish your recipe</button>
+      </form>
+    </div>
+  </section>
+</section>

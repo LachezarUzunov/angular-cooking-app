@@ -1,0 +1,105 @@
+.background {
+  background-image: url(../../images/vegetables-3193196_1920.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 120vh;
+}
+
+.content {
+  max-width: 920px;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  padding-top: 80px;
+  color: white;
+  font-size: 28px;
+}
+
+.form-inside {
+  margin-top: 40px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inpit-opacity {
+  background-color: rgba(0, 0, 0, 0.349);
+  border: none;
+  color: white;
+  border-radius: 15px;
+}
+
+.input--field {
+  padding-top: 12px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+}
+
+.inpit-opacity:focus {
+  outline: none;
+}
+
+p {
+  color: white;
+  font-size: 18px;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button-main {
+  background-color: yellowgreen;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  text-transform: uppercase;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.caterory-list1,
+.category-list2,
+.category-list3,
+.category-list4 {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox {
+  color: white;
+  font-size: 18px;
+}
+
+.suitable {
+  display: flex;
+  justify-content: center;
+}
+
+.suitable span {
+  padding-left: 10px;
+}
+
+.add-ingredient {
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: yellowgreen;
+  color: black;
+}
+
+.ingredient {
+  display: flex;
+  justify-content: space-between;
+}
