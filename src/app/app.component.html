@@ -1,2 +1,7 @@
-<h1>My List of Recipes</h1>
-<app-recipe-create></app-recipe-create>
+<app-header></app-header>
+
+<main>
+  <app-recipe-create (ingredientCreated)="onIngredientAdded($event)"></app-recipe-create>
+  <app-latest-recipes></app-latest-recipes>
+</main>
+

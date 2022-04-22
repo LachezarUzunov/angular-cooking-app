@@ -10,29 +10,37 @@
           class="inpit-opacity input--field"
           type="text"
           placeholder="Recipe title..."
+          name="title"
         />
         <p>Ingredients:</p>
-        <app-ingredient-list></app-ingredient-list>
+        <app-ingredient-list [ingredients]="products"></app-ingredient-list>
         <article class="ingredient">
           <input
+            [(ngModel)]="enteredProduct"
             class="inpit-opacity input--field"
             type="text"
             placeholder="Carrots, onion, pasta..."
+            name="product"
+
           />
           <input
             class="inpit-opacity input--field"
             type="number"
             placeholder="quantity..."
+            name="quantity"
+            [(ngModel)]="enteredQuantity"
           />
-          <select name="ingredient-type" id="kilo">
+          <select name="ingredient-type"
+          id="kilo"
+          [(ngModel)]="selectedType"
+          >
             <option value="kilo">Kilo(s).</option>
             <option value="mililiters">ml.</option>
             <option value="pieces">Item(s)</option>
             <option value="by-taste">By taste</option>
           </select>
-          <button class="add-ingredient">+</button>
+          <button class="add-ingredient" (click)="onIngredientAdd()">+</button>
         </article>
-        <!-- ingredients component here -->
 
         <p>Preparation - Add the Steps for Cooking Your Masterpiece</p>
         <textarea

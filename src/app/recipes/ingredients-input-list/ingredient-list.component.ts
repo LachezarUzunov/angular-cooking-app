@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-ingredient-list',
@@ -6,8 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./ingredient-list.component.css'],
 })
 export class IngredientListComponent {
-  ingredients = [
-    { ingredient: 'carrot', quantity: 5, type: 'pieces' },
-    { ingredient: 'carrot', quantity: 5, type: 'pieces' },
-  ];
+  // ingredients = [
+  //   { ingredient: 'carrot', quantity: 5, type: 'pieces' },
+  //   { ingredient: 'carrot', quantity: 5, type: 'pieces' },
+  // ];
+
+  @Input() ingredients: any[] = [];
+
 }

@@ -1,0 +1,43 @@
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  max-width: 920px;
+  margin: auto;
+  display: flex;
+  gap: 30px;
+}
+
+.image {
+  min-width: 220px;
+  min-height: 220px;
+  background-image: url('./recipe-excerpt/image/pumpkin-soup-3645375_640.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.title {
+  font-family: 'Lobster', cursive;
+  font-size: 32px;
+}
+
+.text {
+  font-family: 'Fredoka', sans-serif;
+  padding-top: 10px;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+.read-more {
+  margin-top: 20px;
+  padding: 8px 16px;
+  border-radius: 15px;
+  background-color: white;
+  border: solid 4px yellowgreen;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+
