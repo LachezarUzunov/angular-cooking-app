@@ -11,6 +11,7 @@
           type="text"
           placeholder="Recipe title..."
           name="title"
+          [(ngModel)]="enteredTitle"
         />
         <p>Ingredients:</p>
         <app-ingredient-list [ingredients]="products"></app-ingredient-list>
@@ -21,7 +22,6 @@
             type="text"
             placeholder="Carrots, onion, pasta..."
             name="product"
-
           />
           <input
             class="inpit-opacity input--field"
@@ -30,14 +30,11 @@
             name="quantity"
             [(ngModel)]="enteredQuantity"
           />
-          <select name="ingredient-type"
-          id="kilo"
-          [(ngModel)]="selectedType"
-          >
-            <option value="kilo">Kilo(s).</option>
-            <option value="mililiters">ml.</option>
-            <option value="pieces">Item(s)</option>
-            <option value="by-taste">By taste</option>
+          <select name="ingredient-type" id="kilo" [(ngModel)]="selectedType">
+            <option value="kilo(s).">Kilo(s).</option>
+            <option value="ml.">ml.</option>
+            <option value="piece(s).">Piece(s)</option>
+            <option value="by taste.">By taste</option>
           </select>
           <button class="add-ingredient" (click)="onIngredientAdd()">+</button>
         </article>
@@ -49,58 +46,46 @@
           id="preparation"
           cols="10"
           rows="4"
+          [(ngModel)]="enteredSteps"
         ></textarea>
 
         <p>Add To Categories</p>
         <article class="categories">
-          <div class="caterory-list1">
-            <label class="checkbox"
-              ><input type="checkbox" id="vegetarian" name="vegetarian" />
-              Vegetarian</label
-            >
-            <label class="checkbox"
-              ><input type="checkbox" id="soup" name="soup" /> Soup</label
-            >
-          </div>
-          <div class="category-list2">
-            <label class="checkbox"
-              ><input type="checkbox" id="salad" name="salad" /> Salad</label
-            >
-            <label class="checkbox"
-              ><input type="checkbox" id="meat" name="meat" /> Meat</label
-            >
-          </div>
-
-          <div class="category-list3">
-            <label class="checkbox"
-              ><input type="checkbox" id="dessert" name="dessert" />
-              Dessert</label
-            >
-            <label class="checkbox"
-              ><input type="checkbox" id="pizza" name="pizza" /> Pizza</label
-            >
-          </div>
-          <div class="category-list4">
-            <label class="checkbox"
-              ><input type="checkbox" id="pasta" name="pasta" /> Pasta</label
-            >
-            <label class="checkbox"
-              ><input type="checkbox" id="fast" name="fast" /> Under 30
-              mins</label
-            >
-          </div>
+          <ul class="checkbox-items">
+            <li class="checkbox" *ngFor="let item of checkboxesDataList">
+              <input
+                type="checkbox"
+                [(ngModel)]="item.isChecked"
+                (change)="changeSelection()"
+                name="{{ item.label }}"
+              />
+              {{ item.label }}
+            </li>
+          </ul>
         </article>
 
         <div class="suitable">
           <p>
             Suitable for
-            <span
-              ><input class="inpit-opacity input--field" type="number"
-            /></span>
+            <span>
+              <select
+                name="suitable-for"
+                id="suitable"
+                [(ngModel)]="selectedSuitable"
+              >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+              </select>
+            </span>
+            people.
           </p>
         </div>
 
-        <button class="button-main">Publish your recipe</button>
+        <button class="button-main" (click)="onRecipeCreate()">
+          Publish your recipe
+        </button>
       </form>
     </div>
   </section>
