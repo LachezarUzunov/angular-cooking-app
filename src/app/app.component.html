@@ -1,6 +1,11 @@
 <app-header></app-header>
 
 <main>
-  <app-recipe-create></app-recipe-create>
-  <app-latest-recipes></app-latest-recipes>
+  <app-recipe-create
+    (recipePublished)="onRecipePublished($event)"
+  ></app-recipe-create>
+  <app-latest-recipes [recipes]="storedRecipes"></app-latest-recipes>
+
+  <app-login></app-login>
+  <app-registration></app-registration>
 </main>

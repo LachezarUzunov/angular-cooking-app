@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 import { Recipe } from '../recipe.model';
 
@@ -28,8 +28,8 @@ export class RecipeCreateComponent {
   selectedType: string = '';
   enteredSteps: string = '';
   selectedSuitable: Number = 0;
-  recipes: Recipe[] = [];
 
+  @Output() recipePublished = new EventEmitter<Recipe>();
   products: any[] = [];
 
   changeSelection() {
@@ -75,7 +75,6 @@ export class RecipeCreateComponent {
       suitableFor: Number(this.selectedSuitable),
     };
 
-    this.recipes.push(recipe);
-    console.log(recipe);
+    this.recipePublished.emit(recipe);
   }
 }

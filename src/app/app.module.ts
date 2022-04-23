@@ -8,14 +8,18 @@ import { IngredientListComponent } from './recipes/ingredients-input-list/ingred
 import { RecipeCreateComponent } from './recipes/recipe-create/recipe-create.component';
 import { HeaderComponent } from './header/header.component';
 import { LatestRecipesComponent } from './recipes/latest-recipes/latest-recipes.component';
+import { RegistrationComponent } from './users/registration/registration.component';
+import { LoginComponent } from './users/login/login.component';
 
 @NgModule({
-  declarations: [AppComponent,
+  declarations: [
+    AppComponent,
     RecipeCreateComponent,
     IngredientListComponent,
     HeaderComponent,
     LatestRecipesComponent,
-
+    RegistrationComponent,
+    LoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
