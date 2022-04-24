@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 
-import { Recipe } from '../recipe.model';
+import { RecipesService } from '../recipes.service';
 
 @Component({
   selector: 'app-recipe-create',
@@ -29,7 +29,8 @@ export class RecipeCreateComponent {
   enteredSteps: string = '';
   selectedSuitable: Number = 0;
 
-  @Output() recipePublished = new EventEmitter<Recipe>();
+  constructor(public recipesService: RecipesService) {}
+
   products: any[] = [];
 
   changeSelection() {
@@ -67,14 +68,12 @@ export class RecipeCreateComponent {
   }
 
   onRecipeCreate() {
-    const recipe = {
-      title: this.enteredTitle,
-      ingredients: this.products,
-      preparation: this.enteredSteps,
-      categories: this.selectedCategories,
-      suitableFor: Number(this.selectedSuitable),
-    };
-
-    this.recipePublished.emit(recipe);
+    this.recipesService.addRecipe(
+      this.enteredTitle,
+      this.products,
+      this.enteredSteps,
+      this.selectedCategories,
+      Number(this.selectedSuitable)
+    );
   }
 }

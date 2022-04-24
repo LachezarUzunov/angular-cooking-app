@@ -1,0 +1,36 @@
+<section class="register">
+  <div class="container">
+    <h1>Sign Up</h1>
+    <form (submit)="onRegistration(userCreated)" #userCreated="ngForm">
+      <div class="form-control">
+        <input
+          type="text"
+          name="firstName"
+          required
+          ngModel
+          #firstName="ngModel"
+        />
+        <label>First Name</label>
+      </div>
+      <div class="form-control">
+        <input type="text" name="lastName" required ngModel />
+        <label>Last Name</label>
+      </div>
+      <div class="form-control">
+        <input type="text" name="email" required ngModel />
+        <label>Email</label>
+      </div>
+      <div class="form-control">
+        <input type="password" name="pass" required ngModel />
+        <label>Password</label>
+      </div>
+      <div class="form-control">
+        <input type="password" name="repass" required ngModel />
+        <label>Repeat Password</label>
+      </div>
+      <button class="btn" type="submit">Sign Up</button>
+
+      <p class="text">Have an account? <a class="login" href="#">Login</a></p>
+    </form>
+  </div>
+</section>

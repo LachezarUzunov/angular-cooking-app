@@ -12,6 +12,7 @@
           placeholder="Recipe title..."
           name="title"
           [(ngModel)]="enteredTitle"
+          required
         />
         <p>Ingredients:</p>
         <app-ingredient-list [ingredients]="products"></app-ingredient-list>
@@ -22,6 +23,7 @@
             type="text"
             placeholder="Carrots, onion, pasta..."
             name="product"
+            required
           />
           <input
             class="inpit-opacity input--field"
@@ -47,6 +49,7 @@
           cols="10"
           rows="4"
           [(ngModel)]="enteredSteps"
+          required
         ></textarea>
 
         <p>Add To Categories</p>
@@ -58,6 +61,7 @@
                 [(ngModel)]="item.isChecked"
                 (change)="changeSelection()"
                 name="{{ item.label }}"
+                required
               />
               {{ item.label }}
             </li>
@@ -72,6 +76,7 @@
                 name="suitable-for"
                 id="suitable"
                 [(ngModel)]="selectedSuitable"
+                required
               >
                 <option value="1">1</option>
                 <option value="2">2</option>

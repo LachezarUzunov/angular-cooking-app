@@ -1,0 +1,20 @@
+<section class="login">
+  <div class="container">
+    <h1>Please Login</h1>
+    <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
+      <div class="form-control">
+        <input type="text" name="email" required ngModel />
+        <label>Email</label>
+      </div>
+      <div class="form-control">
+        <input type="password" name="password" required ngModel />
+        <label>Password</label>
+      </div>
+      <button class="btn" type="submit">Login</button>
+
+      <p class="text">
+        Don't have an account? <a class="register" href="#">Register</a>
+      </p>
+    </form>
+  </div>
+</section>
