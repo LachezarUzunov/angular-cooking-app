@@ -15,7 +15,7 @@ export class LatestRecipesComponent implements OnInit, OnDestroy {
   constructor(public recipesService: RecipesService) {}
 
   ngOnInit(): void {
-    this.recipes = this.recipesService.getRecipes();
+    this.recipesService.getRecipes();
     this.recipesSub = this.recipesService
       .getRecipeUpdateListener()
       .subscribe((recipes: Recipe[]) => {

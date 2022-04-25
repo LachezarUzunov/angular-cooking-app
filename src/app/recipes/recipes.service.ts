@@ -1,14 +1,25 @@
 import { Injectable } from '@angular/core';
-import { Recipe } from './recipe.model';
 import { Subject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+
+import { Recipe } from './recipe.model';
 
 @Injectable({ providedIn: 'root' })
 export class RecipesService {
   private recipes: Recipe[] = [];
   private recipesUpdated = new Subject<Recipe[]>();
 
+  constructor(private http: HttpClient) {}
+
   getRecipes() {
-    return [...this.recipes];
+    this.http
+      .get<{ message: string; allRecipes: Recipe[] }>(
+        'http://localhost:3000/api/recipes'
+      )
+      .subscribe((recipeData) => {
+        this.recipes = recipeData.allRecipes;
+        this.recipesUpdated.next([...this.recipes]);
+      });
   }
 
   getRecipeUpdateListener() {

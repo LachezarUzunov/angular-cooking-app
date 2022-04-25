@@ -28,6 +28,7 @@ export class RecipeCreateComponent {
   selectedType: string = '';
   enteredSteps: string = '';
   selectedSuitable: Number = 0;
+  id: any;
 
   constructor(public recipesService: RecipesService) {}
 
