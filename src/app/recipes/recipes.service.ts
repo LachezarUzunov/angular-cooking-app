@@ -40,8 +40,12 @@ export class RecipesService {
       categories: categories,
       suitableFor: suitableFor,
     };
-
-    this.recipes.push(newRecipe);
-    this.recipesUpdated.next([...this.recipes]);
+    this.http
+      .post<{ message: string }>('http://localhost:3000/api/recipes', newRecipe)
+      .subscribe((responseData) => {
+        console.log(responseData.message);
+        this.recipes.push(newRecipe);
+        this.recipesUpdated.next([...this.recipes]);
+      });
   }
 }
