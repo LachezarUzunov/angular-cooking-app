@@ -1,0 +1,11 @@
+.section {
+  max-width: 720px;
+  width: 720px;
+  margin: auto;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}

@@ -3,6 +3,6 @@
   <div class="excerpt">
     <h2 class="title">{{ recipe.title }}</h2>
     <p class="text">{{ recipe.preparation }}</p>
-    <button class="read-more">Read more</button>
+    <a class="read-more" [routerLink]="['/details', recipe.id]">Read more</a>
   </div>
 </section>

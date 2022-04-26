@@ -64,4 +64,18 @@ app.use("/api/recipes", (req, res, next) => {
   });
 });
 
+app.get("/api/recipes/:id", (req, res, next) => {
+  Recipe.findById(req.params.id).then((doc) => {
+    res.status(200).json({
+      message: "Recipe fetched successfully",
+      recipe: doc,
+    });
+  });
+});
+
+app.delete("/api/recipes/:id", (req, res, next) => {
+  console.log(req.params.id);
+  res.status(200).json({ message: "Recipe deleted!" });
+});
+
 module.exports = app;

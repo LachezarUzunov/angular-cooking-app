@@ -1,9 +1,29 @@
-<section>
-  <h1>Recipe Title</h1>
+<section class="recipe">
+  <h1 class="title">{{ recipe.title }}</h1>
   <div class="line"></div>
   <div>
     <h2>Ingredients</h2>
-
+    <div *ngFor="let ingredient of recipe.ingredients">
+      <p class="ingredients">
+        {{ recipe.ingredients.indexOf(ingredient) + 1 }}.
+        {{ ingredient.product }} - {{ ingredient.quantity }}
+        {{ ingredient.type }}
+      </p>
+    </div>
+    <div>
+      <h2>Preparation</h2>
+      <p class="prep">{{ recipe.preparation }}</p>
+      <h3 class="suitable">Suitable for {{ recipe.suitableFor }}</h3>
+    </div>
+    <div class="buttons">
+      <div>
+        <button class="primaryButton">Cook</button>
+        <button class="likeButton">Like</button>
+      </div>
+      <div>
+        <a class="edit" [routerLink]="['/edit', recipe.id]">Edit</a>
+        <a class="delete" [routerLink]="['/delete', recipe.id]">Delete</a>
+      </div>
+    </div>
   </div>
-
 </section>
