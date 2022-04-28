@@ -18,6 +18,10 @@
   width: 100%;
 }
 
+input[type="file"] {
+  visibility: hidden;
+}
+
 h1 {
   font-family: "Josefin Sans", sans-serif;
   font-size: 26px;
@@ -82,4 +86,13 @@ label {
   font-style: italic;
   font-weight: 500;
   font-size: 18px;
+}
+
+.image-preview {
+  height: 5rem;
+  margin: 1rem 0;
+}
+
+.image-preview img {
+  height: 100%;
 }

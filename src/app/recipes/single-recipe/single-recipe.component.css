@@ -1,11 +1,125 @@
-.section {
+.main-recipe {
+  background-image: url("../../images/markus-winkler-RQxYIQMsS5M-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.recipe {
+  margin-top: 20px;
+  padding-top: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
   max-width: 720px;
-  width: 720px;
+  height: 100vh;
   margin: auto;
+  background-color: rgba(240, 248, 255, 0.288);
+  border-color: 1px solid darkgray;
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  font-family: "Lobster", cursive;
 }
 
 a {
-  display: block;
   text-decoration: none;
   color: black;
 }
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 18px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 1px;
+}
+
+.ingredients {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons div {
+  display: flex;
+  gap: 20px;
+}
+
+.primaryButton {
+  font-family: "Fredoka", sans-serif;
+  letter-spacing: 2px;
+  background-color: yellowgreen;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  text-transform: uppercase;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.likeButton {
+  font-family: "Fredoka", sans-serif;
+  letter-spacing: 2px;
+  background-color: cornflowerblue;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  text-transform: uppercase;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.edit {
+  font-family: "Fredoka", sans-serif;
+  letter-spacing: 2px;
+  background-color: cornflowerblue;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  text-transform: uppercase;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.delete {
+  font-family: "Fredoka", sans-serif;
+  cursor: pointer;
+  letter-spacing: 2px;
+  background-color: crimson;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  text-transform: uppercase;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+/*         font-family: 'Bungee', cursive;
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-family: 'Josefin Sans', sans-serif;
+
+    font-family: 'Lobster', cursive;
+
+    font-family: 'Roboto', sans-serif; */

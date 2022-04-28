@@ -50,6 +50,22 @@ app.post("/api/recipes", (req, res, next) => {
   });
 });
 
+app.post("/api/users", (req, res, next) => {
+  const user = new User({
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    password: req.body.password,
+  });
+
+  console.log(user);
+  user.save();
+
+  res.status(201).json({
+    message: "User added successfully",
+  });
+});
+
 // pass
 // 6Bat6ExsAwATvB1n
 // user
